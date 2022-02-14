@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>智能家居 on 黄艳杰的网站</title>
+    <link>/zh-cn/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/</link>
+    <description>Recent content in 智能家居 on 黄艳杰的网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 19 May 2020 21:04:32 +0800</lastBuildDate><atom:link href="/zh-cn/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>智能家居</title>
+      <link>/zh-cn/docs/smart-home/</link>
+      <pubDate>Tue, 19 May 2020 21:04:32 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/zh-cn/docs/smart-home/</guid>
+      <description>&lt;h2 id=&#34;智能家居简介&#34;&gt;智能家居简介&lt;a class=&#34;anchor ms-1&#34; href=&#34;#智能家居简介&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  智能家居是以住宅为平台，利用综合布线技术、网络通信技术、安全防范技术、自动控制技术、音视频技术将家居生活有关的设施集成，构建高效的住宅设施与家庭日程事务的管理系统，提升家居安全性、便利性、舒适性、艺术性，并实现环保节能的居住环境。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

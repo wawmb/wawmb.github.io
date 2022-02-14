@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微信 on 黄艳杰的网站</title>
+    <link>/zh-cn/tags/%E5%BE%AE%E4%BF%A1/</link>
+    <description>Recent content in 微信 on 黄艳杰的网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 21 Oct 2020 21:04:32 +0800</lastBuildDate><atom:link href="/zh-cn/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微信小程序</title>
+      <link>/zh-cn/docs/wechat-applet/</link>
+      <pubDate>Wed, 21 Oct 2020 21:04:32 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/zh-cn/docs/wechat-applet/</guid>
+      <description>&lt;h2 id=&#34;微信小程序简介&#34;&gt;微信小程序简介&lt;a class=&#34;anchor ms-1&#34; href=&#34;#微信小程序简介&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  小程序的主要开发语言是 JavaScript ，小程序的开发同普通的网页开发相比有很大的相似性。对于前端开发者而言，从网页开发迁移到小程序的开发成本并不高，但是二者还是有些许区别的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xintang on Dustin&#39;s Website</title>
+    <link>/en/tags/xintang/</link>
+    <description>Recent content in Xintang on Dustin&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 18 Jul 2019 19:54:29 +0800</lastBuildDate><atom:link href="/en/tags/xintang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xintang-Project-Hall-Induction</title>
+      <link>/en/docs/xintang-project-hall-induction/</link>
+      <pubDate>Thu, 18 Jul 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/xintang-project-hall-induction/</guid>
+      <description>&lt;h2 id=&#34;project-introduction&#34;&gt;Project introduction&lt;a class=&#34;anchor ms-1&#34; href=&#34;#project-introduction&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Based on the new Tang chip ms51fb9ae chip, the T16 knob on light PCB is designed, and its corresponding knob function program is written.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xintang-Project-Digital-Display</title>
+      <link>/en/docs/xintang-project-digital-display/</link>
+      <pubDate>Tue, 26 Mar 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/xintang-project-digital-display/</guid>
+      <description>&lt;h2 id=&#34;project-introduction&#34;&gt;Project introduction&lt;a class=&#34;anchor ms-1&#34; href=&#34;#project-introduction&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Based on Xintang chip ms51fb9ae chip, the schematic PCB of T10 window board is designed, and its corresponding digital display function program is written.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

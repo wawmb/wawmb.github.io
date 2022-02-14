@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电赛 on 黄艳杰的网站</title>
+    <link>/zh-cn/tags/%E7%94%B5%E8%B5%9B/</link>
+    <description>Recent content in 电赛 on 黄艳杰的网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 16 Jul 2018 19:54:29 +0800</lastBuildDate><atom:link href="/zh-cn/tags/%E7%94%B5%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>电赛项目</title>
+      <link>/zh-cn/docs/electronic-contest/</link>
+      <pubDate>Mon, 16 Jul 2018 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/zh-cn/docs/electronic-contest/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;a class=&#34;anchor ms-1&#34; href=&#34;#项目简介&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  要求小车实现定时一分钟充电，并根据红外接收情况实现小车爬坡循迹行驶。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

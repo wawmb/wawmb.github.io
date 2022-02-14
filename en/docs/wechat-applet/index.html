@@ -1,0 +1,812 @@
+<!doctype html><html lang="en" data-palette="blue"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wechat-Applet - Dustin&#39;s Website</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/icons/favicon.ico">
+<link rel="manifest" href="/en/manifest.json">
+<meta name="keywords" content="" />
+<meta name="description" content="Introduction to wechat applet
+  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different." /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Wechat-Applet">
+<meta itemprop="description" content="Introduction to wechat applet
+  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different."><meta itemprop="datePublished" content="2020-10-21T19:54:29+08:00" />
+<meta itemprop="dateModified" content="2020-10-21T19:54:29+08:00" />
+<meta itemprop="wordCount" content="1260">
+<meta itemprop="keywords" content="Wechat," /><meta property="og:title" content="Wechat-Applet" />
+<meta property="og:description" content="Introduction to wechat applet
+  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/en/docs/wechat-applet/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2020-10-21T19:54:29+08:00" />
+<meta property="article:modified_time" content="2020-10-21T19:54:29+08:00" />
+<meta property="og:see_also" content="/en/docs/autojs/" /><meta property="og:see_also" content="/en/posts/markdown-syntax/" /><meta property="og:see_also" content="/en/docs/smart-home/" /><meta property="og:see_also" content="/en/docs/test-tooling/" /><meta property="og:see_also" content="/en/docs/xintang-project-hall-induction/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wechat-Applet"/>
+<meta name="twitter:description" content="Introduction to wechat applet
+  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different."/>
+<meta property="og:image" content="/images/1.png"/>
+  <meta name="twitter:image" content="/images/1.png"/><link rel="stylesheet" href="/css/main.min.a74c8f05dc4b16520ce1637158954c31b4b0ab705ec9f6762d5b05039f72942e.css" integrity="sha256-p0yPBdxLFlIM4WNxWJVMMbSwq3BeyfZ2LVsFA59ylC4=" crossorigin="anonymous"><link rel="stylesheet" href="/css/viewer.min.3d228794bcedbbfa0412beb8fbc1ec6973202945e42af7004f742a4d7bd620ab.css" integrity="sha256-PSKHlLztu/oEEr64&#43;8HsaXMgKUXkKvcAT3QqTXvWIKs=" crossorigin="anonymous"></head>
+  <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3" href="/en/"><img class="logo" alt="Logo" src="/images/1.png" loading="lazy"
+   width="1023" height="965"
+   />
+Welcome to Visit
+    </a>
+    
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Settings</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-language"></i> Language</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="dropdown">
+        <a class="btn btn-sm btn-outline-primary dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li><a class="dropdown-item" href="/zh-cn/">简体中文</a></li></ul>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> Mode</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> Palette</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex justify-content-between visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="Blue"
+        class="btn btn-sm w-100 palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="Blue Gray"
+        class="btn btn-sm w-100 palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="Brown"
+        class="btn btn-sm w-100 palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="Cyan"
+        class="btn btn-sm w-100 palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="Green"
+        class="btn btn-sm w-100 palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="Indigo"
+        class="btn btn-sm w-100 palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="Orange"
+        class="btn btn-sm w-100 palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="Pink"
+        class="btn btn-sm w-100 palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="Purple"
+        class="btn btn-sm w-100 palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="Red"
+        class="btn btn-sm w-100 palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="Teal"
+        class="btn btn-sm w-100 palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="Yellow"
+        class="btn btn-sm w-100 palette" data-palette="yellow">
+      </button></div>
+</section>
+<section class="setting actions d-flex justify-content-around mt-auto overflow-auto">
+  <a role="button" class="action action-go-back" href="javascript: window.history.back();">
+    <span class="action-icon"><i class="fas fa-2x fa-arrow-left"></i></span> Go back
+  </a>
+  <a role="button" class="action action-reload-page">
+    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+  </a>
+  <a role="button" class="action action-copy-url">
+    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> Copy URL
+  </a></section>
+
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/en/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/en/series/">
+            <i class="fas fa-fw fa-columns"></i>Series
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>Archives
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/categories/">
+            <i class="fas fa-fw fa-folder"></i>Categories
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/tags/">
+            <i class="fas fa-fw fa-tags"></i>Tags
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu"><li>
+              <a class="dropdown-item"
+                href="/en/about/">
+                Resume
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://gitee.com/wawmm" target="_blank" rel="noopener noreferrer">
+                Gitee
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/wawmb/wawmb.github.io" target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content"><button class="catalog-toggle d-lg-none position-fixed top-0 left-0 h-100 p-0" type="button" data-bs-toggle="collapse" data-bs-target=".docs-catalog" aria-expanded="false" aria-controls="collapseCatalog">
+    <i class="catalog-toggle-icon fas fa-chevron-left" data-fa-transform="rotate-180"></i>
+</button>
+<aside class="docs-catalog col-lg-2 collapse collapse-horizontal catalog-collapse" tabindex="-1">
+  <div class="container px-0 px-lg-1">
+    <div class="row card component">
+      <div class="card-body">
+        <ul class="list-unstyled mb-2"><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/autojs/">Autojs</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/electronic-contest/">Electronic-Contest</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/hetai-project/">Hetai-Project</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/smart-home/">Smart-Home</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/test-tooling/">Test-Tooling</a>
+        </li><li class="mb-2 active text-accent" tabindex="-1">
+          <a href="/en/docs/wechat-applet/">Wechat-Applet</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/xintang-project-digital-display/">Xintang-Project-Digital-Display</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="/en/docs/xintang-project-hall-induction/">Xintang-Project-Hall-Induction</a>
+        </li></ul>
+      </div>
+    </div>
+  </div>
+</aside><div class="col-lg-7 ms-auto">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/en/">Home</a></li><li class="breadcrumb-item"><a href="/en/docs/">Docs</a></li><li class="breadcrumb-item active">Wechat-Applet</li></ol>
+  </div>
+</nav><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a class="action action-panel-toggler" role="button" title="Panel toggler">
+      <i class="fas fa-fw fa-chevron-circle-down"></i>
+    </a>
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button" title="Sidebar toggler">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+
+    
+  <div class="post-translations nav-item dropdown dropstart action">
+    <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Translations dropdown menu"
+      title="Translations">
+      <i class="fas fa-fw fa-language"></i>
+    </a>
+    <div class="dropdown-menu"><a class="dropdown-item post-translation" href="/zh-cn/docs/wechat-applet/">简体中文</a></div>
+  </div>
+
+
+    
+    <a class="action" href="#post-copyright" role="button" aria-label="Copyright" title="Copyright">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    
+    <a class="action d-lg-none" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<article class="row card component mb-4 post">
+<div class="card-header ">
+    <h1 class="card-title post-title">Wechat-Applet
+</h1>
+</div>
+<div class="card-body"><div class="post-meta">
+  <span class="post-date" title="created on 2020-10-21 19:54:29 &#43;0800 CST.">
+    Oct 21, 2020
+  </span><span class="post-reading-time">
+    6 min read
+  </span><span class="post-taxonomies"><a href="/en/categories/wechat-applet/" class="badge post-taxonomy">Wechat-Applet</a><a href="/en/series/docs/" class="badge post-taxonomy">Docs</a><a href="/en/tags/wechat/" class="badge post-taxonomy">Wechat</a></span>
+</div>
+<div class="alert alert-info" role="alert">
+    This static website is built using <code>Hugo</code>, and all articles need to be written in <code>markdown syntax</code>. If you want to know about markdown,
+    please take a look at <a href="/en/posts/markdown-syntax" target="_blank">Markdown Syntax</a>.
+</div><div class="post-content mb-3"><h2 id="introduction-to-wechat-applet">Introduction to wechat applet<a class="anchor ms-1" href="#introduction-to-wechat-applet"><i class="fas fa-link"></i></a></h2>
+<p>  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different.</p>
+<h2 id="project-realization">Project realization<a class="anchor ms-1" href="#project-realization"><i class="fas fa-link"></i></a></h2>
+<p>  Through the convenient and fast application of wechat applet, gather hungry alliance, meituan alliance CPS promotion, as well as small games and lottery projects, and customize the lottery to realize the gospel of entanglement.</p>
+<h2 id="concrete-step">Concrete Step<a class="anchor ms-1" href="#concrete-step"><i class="fas fa-link"></i></a></h2>
+<p>First、Apply for a small program</p>
+<p>  Application address：<a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer">Wechat public platform</a>，The operation of the application applet is very simple. Just follow the steps of Baidu to apply.</p>
+<p>Second、Download wechat developer tools</p>
+<p>Third、Partial code sharing</p>
+<p>  Web page programming adopts a combination of HTML + CSS + JS. Html is used to describe the structure of the current page, CSS is used to describe the appearance of the page, and JS is usually used to deal with the interaction between the page and users. There is the same role in applets, in which wxml plays a role similar to HTML.</p>
+<p>  Take <code>WXML</code> as an example：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln"> 1</span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 2</span>  <span class="p">&lt;</span><span class="nt">swiper</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab1&#34;</span> <span class="na">indicator-dots</span><span class="o">=</span><span class="s">&#34;{{indicatorDots}}&#34;</span> <span class="na">autoplay</span><span class="o">=</span><span class="s">&#34;{{autoplay}}&#34;</span> <span class="na">interval</span><span class="o">=</span><span class="s">&#34;{{interval}}&#34;</span> <span class="na">duration</span><span class="o">=</span><span class="s">&#34;{{duration}}&#34;</span> <span class="na">circular</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 3</span>    <span class="p">&lt;</span><span class="nt">block</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&#34;{{imgUrls}}&#34;</span> <span class="na">wx:key</span><span class="o">=</span><span class="s">&#34;unique&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 4</span>      <span class="p">&lt;</span><span class="nt">swiper-item</span><span class="p">&gt;</span>
+<span class="ln"> 5</span>        <span class="p">&lt;</span><span class="nt">image</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{item}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;slide-image&#34;</span> <span class="p">/&gt;</span>
+<span class="ln"> 6</span>      <span class="p">&lt;/</span><span class="nt">swiper-item</span><span class="p">&gt;</span>
+<span class="ln"> 7</span>    <span class="p">&lt;/</span><span class="nt">block</span><span class="p">&gt;</span>
+<span class="ln"> 8</span>  <span class="p">&lt;/</span><span class="nt">swiper</span><span class="p">&gt;</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span>  <span class="p">&lt;</span><span class="nt">v-tabs</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">vue-id</span><span class="o">=</span><span class="s">&#34;8dd740cc-1&#34;</span> <span class="na">tabs</span><span class="o">=</span><span class="s">&#34;{{tabs}}&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{current}}&#34;</span> <span class="na">data-event-opts</span><span class="o">=</span><span class="s">&#34;{{[[&#39;^change&#39;,[[&#39;changeTab&#39;]]],[&#39;^input&#39;,[[&#39;__set_model&#39;,[&#39;&#39;,&#39;current&#39;,&#39;$event&#39;,[]]]]]]}}&#34;</span> <span class="na">bind:change</span><span class="o">=</span><span class="s">&#34;__e&#34;</span> <span class="na">bind:input</span><span class="o">=</span><span class="s">&#34;__e&#34;</span> <span class="na">bind:__l</span><span class="o">=</span><span class="s">&#34;__l&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">v-tabs</span><span class="p">&gt;</span>
+<span class="ln">11</span>
+<span class="ln">12</span>  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;movie&#34;</span><span class="p">&gt;</span>
+<span class="ln">13</span>    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;movie-head&#34;</span><span class="p">&gt;</span>
+<span class="ln">14</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;movie-title&#34;</span><span class="p">&gt;</span>热映电影<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">15</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;movie-count&#34;</span><span class="p">&gt;</span>全部46部<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">16</span>    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">17</span>    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;movie-list&#34;</span><span class="p">&gt;</span>
+<span class="ln">18</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
+<span class="ln">19</span>        <span class="p">&lt;</span><span class="nt">image</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cover&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.hualigs.cn/image/61cd410fc19ac.jpg&#34;</span> <span class="na">mode</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">20</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>寻龙传说<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">21</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;buy&#34;</span><span class="p">&gt;</span>已售空<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">22</span>      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">23</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
+<span class="ln">24</span>        <span class="p">&lt;</span><span class="nt">image</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cover&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.hualigs.cn/image/61cd4146cc8c6.jpg&#34;</span> <span class="na">mode</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">25</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>无依之地<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">26</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;buy&#34;</span><span class="p">&gt;</span>已售空<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">27</span>      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">28</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
+<span class="ln">29</span>        <span class="p">&lt;</span><span class="nt">image</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cover&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.hualigs.cn/image/61cd41b0c46ae.jpg&#34;</span> <span class="na">mode</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">30</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>唐人街探案3<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">31</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;buy&#34;</span><span class="p">&gt;</span>已售空<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">32</span>      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">33</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
+<span class="ln">34</span>        <span class="p">&lt;</span><span class="nt">image</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cover&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.hualigs.cn/image/61cd41ce7e7f4.jpg&#34;</span> <span class="na">mode</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">35</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>送你一朵小红花<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">36</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;buy&#34;</span><span class="p">&gt;</span>已售空<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">37</span>      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">38</span>    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">39</span>  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">40</span>
+<span class="ln">41</span>  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">data-ref</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;coupon vue-ref&#34;</span><span class="p">&gt;</span>
+<span class="ln">42</span>    <span class="p">&lt;</span><span class="nt">block</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&#34;{{couponList}}&#34;</span> <span class="na">wx:for-item</span><span class="o">=</span><span class="s">&#34;v&#34;</span> <span class="na">wx:for-index</span><span class="o">=</span><span class="s">&#34;i&#34;</span> <span class="na">wx:key</span><span class="o">=</span><span class="s">&#34;i&#34;</span><span class="p">&gt;</span>
+<span class="ln">43</span>      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">data-event-opts</span><span class="o">=</span><span class="s">&#34;{{[[&#39;tap&#39;,[[&#39;toCoupon&#39;,[i]]]]]}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&#34;__e&#34;</span><span class="p">&gt;</span>
+<span class="ln">44</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;top&#34;</span><span class="p">&gt;</span>
+<span class="ln">45</span>          <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;</span>
+<span class="ln">46</span>            <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+<span class="ln">47</span>              <span class="p">&lt;</span><span class="nt">image</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{v.icon}}&#34;</span> <span class="na">mode</span><span class="o">=</span><span class="s">&#34;widthFix&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">48</span>              <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>{{v.name}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">49</span>            <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">50</span>
+<span class="ln">51</span>            <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text&#34;</span><span class="p">&gt;</span>{{v.type}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">52</span>            <span class="c">&lt;!-- &lt;block wx:if=&#34;{{v.type==1}}&#34;&gt;
+</span><span class="ln">53</span><span class="c">              &lt;view class=&#34;text&#34;&gt;天天可领&lt;/view&gt;
+</span><span class="ln">54</span><span class="c">            &lt;/block&gt;
+</span><span class="ln">55</span><span class="c">            &lt;block wx:else&gt;
+</span><span class="ln">56</span><span class="c">              &lt;block wx:if=&#34;{{v.type==2}}&#34;&gt;
+</span><span class="ln">57</span><span class="c">                &lt;view class=&#34;text&#34;&gt;限时秒杀&lt;/view&gt;
+</span><span class="ln">58</span><span class="c">              &lt;/block&gt;
+</span><span class="ln">59</span><span class="c">            &lt;/block&gt; --&gt;</span>
+<span class="ln">60</span>
+<span class="ln">61</span>          <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">62</span>          <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;right&#34;</span><span class="p">&gt;</span>点击查看<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">63</span>        <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">64</span>        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span><span class="p">&gt;</span>
+<span class="ln">65</span>          <span class="p">&lt;</span><span class="nt">image</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{v.bannerPic}}&#34;</span> <span class="na">mode</span><span class="o">=</span><span class="s">&#34;widthFix&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+<span class="ln">66</span>        <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">67</span>      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">68</span>    <span class="p">&lt;/</span><span class="nt">block</span><span class="p">&gt;</span>
+<span class="ln">69</span>  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="ln">70</span><span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</code></pre></div><p>  Wxss has most of the features of CSS, and the applet has also been expanded and modified in wxss.</p>
+<p>  Take <code>WXSS</code> as an example：</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="ln">  1</span><span class="nt">page</span> <span class="p">{</span>
+<span class="ln">  2</span>  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span>
+<span class="ln">  3</span><span class="p">}</span>
+<span class="ln">  4</span>
+<span class="ln">  5</span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<span class="ln">  6</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="ln">  7</span>  <span class="k">line-height</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="ln">  8</span>  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span>
+<span class="ln">  9</span><span class="p">}</span>
+<span class="ln"> 10</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">tab1</span> <span class="p">{</span>
+<span class="ln"> 11</span>  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="n">rpx</span><span class="p">;</span> 
+<span class="ln"> 12</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">750</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 13</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">280</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 14</span><span class="p">}</span> 
+<span class="ln"> 15</span>
+<span class="ln"> 16</span><span class="c">/* 修改dot形状 */</span>
+<span class="ln"> 17</span><span class="p">.</span><span class="nc">wx-swiper-dots</span> <span class="p">.</span><span class="nc">wx-swiper-dot</span><span class="p">{</span>
+<span class="ln"> 18</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">14</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 19</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">14</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 20</span>  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">6</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 21</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">20</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 22</span>  <span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="mf">.5</span><span class="kt">s</span><span class="p">;</span>
+<span class="ln"> 23</span>  <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.3</span><span class="p">)</span>
+<span class="ln"> 24</span><span class="p">}</span>
+<span class="ln"> 25</span><span class="p">.</span><span class="nc">wx-swiper-dots</span> <span class="p">.</span><span class="nc">wx-swiper-dot-active</span><span class="p">{</span>
+<span class="ln"> 26</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">34</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 27</span>  <span class="k">background-color</span><span class="p">:</span> <span class="nb">hsla</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="kt">%</span><span class="p">,</span> <span class="mi">100</span><span class="kt">%</span><span class="p">,</span> <span class="mf">.8</span><span class="p">)</span>
+<span class="ln"> 28</span><span class="p">}</span>
+<span class="ln"> 29</span><span class="c">/* 调成dots的位置 */</span>
+<span class="ln"> 30</span><span class="p">.</span><span class="nc">wx-swiper-dots</span><span class="p">.</span><span class="nc">wx-swiper-dots-horizontal</span> <span class="p">{</span>
+<span class="ln"> 31</span>  <span class="k">top</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+<span class="ln"> 32</span><span class="p">}</span>
+<span class="ln"> 33</span><span class="p">.</span><span class="nc">wx-swiper-dots</span> <span class="p">.</span><span class="nc">wx-swiper-dot</span><span class="p">:</span><span class="nd">nth-of-type</span><span class="o">(</span><span class="nt">n</span><span class="o">+</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+<span class="ln"> 34</span>  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-10</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 35</span><span class="p">}</span>
+<span class="ln"> 36</span>
+<span class="ln"> 37</span><span class="p">.</span><span class="nc">slide-image</span><span class="p">{</span>
+<span class="ln"> 38</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">750</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 39</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">280</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 40</span><span class="p">}</span>
+<span class="ln"> 41</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">tab</span> <span class="p">{</span>
+<span class="ln"> 42</span>  <span class="c">/* position: fixed; */</span>
+<span class="ln"> 43</span>  <span class="c">/* top: 0;
+</span><span class="ln"> 44</span><span class="c">  left: 0; */</span>
+<span class="ln"> 45</span>  <span class="k">z-index</span><span class="p">:</span> <span class="mi">9999</span>
+<span class="ln"> 46</span><span class="p">}</span>
+<span class="ln"> 47</span>
+<span class="ln"> 48</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">{</span>
+<span class="ln"> 49</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="ln"> 50</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">700</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 51</span>  <span class="k">margin</span><span class="p">:</span> <span class="mi">20</span><span class="n">rpx</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="ln"> 52</span>  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+<span class="ln"> 53</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">20</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 54</span>  <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">rpx</span>
+<span class="ln"> 55</span><span class="p">}</span>
+<span class="ln"> 56</span>
+<span class="ln"> 57</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-head</span> <span class="p">{</span>
+<span class="ln"> 58</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="ln"> 59</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">700</span><span class="n">rpx</span>
+<span class="ln"> 60</span><span class="p">}</span>
+<span class="ln"> 61</span>
+<span class="ln"> 62</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-head</span> <span class="p">.</span><span class="nc">movie-title</span> <span class="p">{</span>
+<span class="ln"> 63</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">350</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 64</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="ln"> 65</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">30</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 66</span>  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span>
+<span class="ln"> 67</span><span class="p">}</span>
+<span class="ln"> 68</span>
+<span class="ln"> 69</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-head</span> <span class="p">.</span><span class="nc">movie-count</span> <span class="p">{</span>
+<span class="ln"> 70</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">310</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 71</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="ln"> 72</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="n">rpx</span>
+<span class="ln"> 73</span><span class="p">}</span>
+<span class="ln"> 74</span>
+<span class="ln"> 75</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span><span class="p">::</span><span class="nd">-webkit-scrollbar</span> <span class="p">{</span>
+<span class="ln"> 76</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span>
+<span class="ln"> 77</span><span class="p">}</span>
+<span class="ln"> 78</span>
+<span class="ln"> 79</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span> <span class="p">{</span>
+<span class="ln"> 80</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="ln"> 81</span>  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 82</span>  <span class="k">white-space</span><span class="p">:</span> <span class="kc">nowrap</span><span class="p">;</span>
+<span class="ln"> 83</span>  <span class="k">overflow-x</span><span class="p">:</span> <span class="kc">scroll</span>
+<span class="ln"> 84</span><span class="p">}</span>
+<span class="ln"> 85</span>
+<span class="ln"> 86</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span> <span class="p">.</span><span class="nc">item</span> <span class="p">{</span>
+<span class="ln"> 87</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+<span class="ln"> 88</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">170</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 89</span>  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">10</span><span class="n">rpx</span>
+<span class="ln"> 90</span><span class="p">}</span>
+<span class="ln"> 91</span>
+<span class="ln"> 92</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">cover</span> <span class="p">{</span>
+<span class="ln"> 93</span>  <span class="k">display</span><span class="p">:</span> <span class="n">blcok</span><span class="p">;</span>
+<span class="ln"> 94</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">160</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 95</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">250</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln"> 96</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">8</span><span class="n">rpx</span>
+<span class="ln"> 97</span><span class="p">}</span>
+<span class="ln"> 98</span>
+<span class="ln"> 99</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
+<span class="ln">100</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">28</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">101</span>  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span><span class="p">;</span>
+<span class="ln">102</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">170</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">103</span>  <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="ln">104</span>  <span class="k">white-space</span><span class="p">:</span> <span class="kc">nowrap</span>
+<span class="ln">105</span><span class="p">}</span>
+<span class="ln">106</span>
+<span class="ln">107</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">movie</span> <span class="p">.</span><span class="nc">movie-list</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">buy</span> <span class="p">{</span>
+<span class="ln">108</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">120</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">109</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">54</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">110</span>  <span class="k">line-height</span><span class="p">:</span> <span class="mi">54</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">111</span>  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#d8d8d8</span><span class="p">;</span>
+<span class="ln">112</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">40</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">113</span>  <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+<span class="ln">114</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">26</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">115</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span>
+<span class="ln">116</span><span class="p">}</span>
+<span class="ln">117</span>
+<span class="ln">118</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">{</span>
+<span class="ln">119</span>  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">120</span>  <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="n">rpx</span>
+<span class="ln">121</span><span class="p">}</span>
+<span class="ln">122</span>
+<span class="ln">123</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">{</span>
+<span class="ln">124</span>  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+<span class="ln">125</span>  <span class="k">margin</span><span class="p">:</span> <span class="mi">30</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">126</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">127</span>  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">30</span><span class="n">rpx</span> <span class="mi">30</span><span class="n">rpx</span> <span class="mi">30</span><span class="n">rpx</span>
+<span class="ln">128</span><span class="p">}</span>
+<span class="ln">129</span>
+<span class="ln">130</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">{</span>
+<span class="ln">131</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">116</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">132</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="ln">133</span>  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="ln">134</span>  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">space-between</span>
+<span class="ln">135</span><span class="p">}</span>
+<span class="ln">136</span>
+<span class="ln">137</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+<span class="ln">138</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">116</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">139</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">440</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">140</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="ln">141</span>  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="ln">142</span>  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">space-between</span>
+<span class="ln">143</span><span class="p">}</span>
+<span class="ln">144</span>
+<span class="ln">145</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">left</span> <span class="p">.</span><span class="nc">content</span> <span class="p">{</span>
+<span class="ln">146</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span>
+<span class="ln">147</span><span class="p">}</span>
+<span class="ln">148</span>
+<span class="ln">149</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">left</span> <span class="p">.</span><span class="nc">icon</span> <span class="p">{</span>
+<span class="ln">150</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+<span class="ln">151</span>  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">bottom</span><span class="p">;</span>
+<span class="ln">152</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">52</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">153</span>  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span>
+<span class="ln">154</span><span class="p">}</span>
+<span class="ln">155</span>
+<span class="ln">156</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">left</span> <span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
+<span class="ln">157</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="ln">158</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+<span class="ln">159</span>  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">bottom</span><span class="p">;</span>
+<span class="ln">160</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">34</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">161</span>  <span class="k">color</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="ln">162</span>  <span class="k">line-height</span><span class="p">:</span> <span class="mi">50</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">163</span>  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span><span class="p">;</span>
+<span class="ln">164</span>  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">15</span><span class="n">rpx</span>
+<span class="ln">165</span><span class="p">}</span>
+<span class="ln">166</span>
+<span class="ln">167</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">left</span> <span class="p">.</span><span class="nc">text</span> <span class="p">{</span>
+<span class="ln">168</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">150</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">169</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">38</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">170</span>  <span class="k">line-height</span><span class="p">:</span> <span class="mi">38</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">171</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="ln">172</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">173</span>  <span class="k">color</span><span class="p">:</span> <span class="mh">#61300e</span><span class="p">;</span>
+<span class="ln">174</span>  <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span> <span class="mh">#f9db8d</span><span class="p">,</span> <span class="mh">#f8d98a</span><span class="p">);</span>
+<span class="ln">175</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">6</span><span class="n">rpx</span>
+<span class="ln">176</span><span class="p">}</span>
+<span class="ln">177</span>
+<span class="ln">178</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">top</span> <span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+<span class="ln">179</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">170</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">180</span>  <span class="k">height</span><span class="p">:</span> <span class="mi">60</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">181</span>  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">30</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">182</span>  <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span> <span class="mh">#ec6f43</span><span class="p">,</span> <span class="mh">#ea4a36</span><span class="p">);</span>
+<span class="ln">183</span>  <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+<span class="ln">184</span>  <span class="k">font-size</span><span class="p">:</span> <span class="mi">28</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">185</span>  <span class="k">line-height</span><span class="p">:</span> <span class="mi">60</span><span class="n">rpx</span><span class="p">;</span>
+<span class="ln">186</span>  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span>
+<span class="ln">187</span><span class="p">}</span>
+<span class="ln">188</span>
+<span class="ln">189</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">bottom</span> <span class="p">{</span>
+<span class="ln">190</span>  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="ln">191</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span>
+<span class="ln">192</span><span class="p">}</span>
+<span class="ln">193</span>
+<span class="ln">194</span><span class="p">.</span><span class="nc">container</span> <span class="p">.</span><span class="nc">coupon</span> <span class="p">.</span><span class="nc">item</span> <span class="p">.</span><span class="nc">bottom</span> <span class="nt">image</span> <span class="p">{</span>
+<span class="ln">195</span>  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="ln">196</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="ln">197</span>  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span>
+<span class="ln">198</span><span class="p">}</span>
+</code></pre></div><p>  It is not enough for a service to only display the interface. It also needs to interact with the user: respond to the user&rsquo;s click, obtain the user&rsquo;s location and so on. In the applet, we handle the user&rsquo;s operation by writing JS script file. In order to realize cloud service and cloud update, wechat free notes are used as the background to read data and update data through post.</p>
+<p>  Take <code>wx.request</code> as an example：</p>
+<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="ln"> 1</span><span class="nx">wx</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+<span class="ln"> 2</span>              <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://share.weiyun.com/3rxFZygp&#39;</span><span class="p">,</span>
+<span class="ln"> 3</span>              <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+<span class="ln"> 4</span>              <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>                <span class="c1">//【横幅图片】
+</span><span class="ln"> 6</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
+<span class="ln"> 7</span>                <span class="kd">var</span> <span class="nx">banner</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;【横幅图片】&#34;</span><span class="p">)[</span><span class="mi">2</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;amp;/g</span><span class="p">,</span><span class="s2">&#34;&amp;&#34;</span><span class="p">)</span>
+<span class="ln"> 8</span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;【横幅图片】中内容&#34;</span><span class="p">,</span> <span class="nx">banner</span><span class="p">)</span>
+<span class="ln"> 9</span>                <span class="kd">var</span> <span class="nx">gather</span> <span class="o">=</span> <span class="nx">banner</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;♑&#34;</span><span class="p">);</span>
+<span class="ln">10</span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;内容转换成集合&#34;</span><span class="p">,</span> <span class="nx">gather</span><span class="p">)</span>
+<span class="ln">11</span>                <span class="nx">that</span><span class="p">.</span><span class="nx">imgUrls</span> <span class="o">=</span> <span class="nx">that</span><span class="p">.</span><span class="nx">imgUrls</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">gather</span><span class="p">);</span>
+<span class="ln">12</span>                <span class="c1">//【分类项目】
+</span><span class="ln">13</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
+<span class="ln">14</span>                <span class="kd">var</span> <span class="nx">classify</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;【分类项目】&#34;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;amp;/g</span><span class="p">,</span><span class="s2">&#34;&amp;&#34;</span><span class="p">)</span>
+<span class="ln">15</span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;【分类项目】中内容&#34;</span><span class="p">,</span> <span class="nx">classify</span><span class="p">)</span>
+<span class="ln">16</span>                <span class="k">if</span> <span class="p">(</span><span class="nx">classify</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">17</span>                  <span class="kd">var</span> <span class="nx">groups</span> <span class="o">=</span> <span class="nx">classify</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;间隔&#34;</span><span class="p">);</span>
+<span class="ln">18</span>                  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">groups</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;第&#34;</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;个&#34;</span><span class="p">)</span>
+<span class="ln">20</span>                    <span class="kd">var</span> <span class="nx">kinds</span> <span class="o">=</span> <span class="nx">groups</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;♑&#34;</span><span class="p">);</span>
+<span class="ln">21</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;内容转换成集合&#34;</span><span class="p">,</span> <span class="nx">kinds</span><span class="p">)</span>
+<span class="ln">22</span>                    <span class="kd">var</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span>
+<span class="ln">23</span>                      <span class="nx">icon</span><span class="o">:</span> <span class="nx">kinds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="ln">24</span>                      <span class="nx">text</span><span class="o">:</span> <span class="nx">kinds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="ln">25</span>                      <span class="nx">tabId</span><span class="o">:</span> <span class="nx">kinds</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+<span class="ln">26</span>                    <span class="p">};</span>
+<span class="ln">27</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;集合转换成对象&#34;</span><span class="p">,</span> <span class="nx">object</span><span class="p">)</span>
+<span class="ln">28</span>                    <span class="nx">that</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">object</span><span class="p">);</span>
+<span class="ln">29</span>                  <span class="p">}</span>
+<span class="ln">30</span>                <span class="p">}</span>
+<span class="ln">31</span>                <span class="c1">//【优惠券项目】
+</span><span class="ln">32</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
+<span class="ln">33</span>                <span class="kd">var</span> <span class="nx">discount</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;【优惠券项目】&#34;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;amp;/g</span><span class="p">,</span><span class="s2">&#34;&amp;&#34;</span><span class="p">)</span>
+<span class="ln">34</span>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;【优惠券项目】中内容&#34;</span><span class="p">,</span> <span class="nx">discount</span><span class="p">)</span>
+<span class="ln">35</span>                <span class="k">if</span> <span class="p">(</span><span class="nx">discount</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">36</span>                  <span class="kd">var</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">discount</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;间隔&#34;</span><span class="p">);</span>
+<span class="ln">37</span>                  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">events</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">38</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;第&#34;</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;个&#34;</span><span class="p">)</span>
+<span class="ln">39</span>                    <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">events</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;♑&#34;</span><span class="p">);</span>
+<span class="ln">40</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;内容转换成集合&#34;</span><span class="p">,</span> <span class="nx">items</span><span class="p">)</span>
+<span class="ln">41</span>                    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+<span class="ln">42</span>                      <span class="nx">bannerPic</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="ln">43</span>                      <span class="nx">icon</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="ln">44</span>                      <span class="nx">appid</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+<span class="ln">45</span>                      <span class="nx">path</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+<span class="ln">46</span>                      <span class="nx">name</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+<span class="ln">47</span>                      <span class="nx">sort</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>
+<span class="ln">48</span>                      <span class="nx">tabId</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span>
+<span class="ln">49</span>                      <span class="nx">type</span><span class="o">:</span> <span class="nx">items</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="ln">50</span>                    <span class="p">};</span>
+<span class="ln">51</span>                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;集合转换成对象&#34;</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span>
+<span class="ln">52</span>                    <span class="nx">that</span><span class="p">.</span><span class="nx">coupons</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+<span class="ln">53</span>                  <span class="p">}</span>
+<span class="ln">54</span>                <span class="p">}</span>
+<span class="ln">55</span>              <span class="p">}</span>
+<span class="ln">56</span>            <span class="p">})</span>
+</code></pre></div><p>  This article applet has been launched on wechat official website. Welcome to scan and view.</p>
+<p>
+    <img class="img-fluid" alt="萌吃嗨喝" src="/en/docs/wechat-applet/images/mchh_huabc44dd7c820553d304b6b76d10803bb_107998_300x0_resize_box_2.png" loading="lazy"
+   width="300" height="300"
+   />
+
+</p></div></div>
+<div class="card-footer"><div class="post-navs d-flex justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/en/docs/smart-home/">Smart-Home
+</a>
+  </div><div class="post-nav post-next">
+    <a href="/en/posts/markdown-syntax/">Markdown Syntax Guide
+</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
+  </div></div></div>
+</article><div class="post-copyright mb-3 row card component" id="post-copyright">
+    <div class="card-header">
+        <h2 class="card-title">Copyright</h2>
+    </div>
+    <div class="card-body"><a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">
+  <span><i class="fab fa-fw fa-2x fa-creative-commons"></i><i class="fab fa-fw fa-2x fa-creative-commons-by"></i><i class="fab fa-fw fa-2x fa-creative-commons-nc"></i><i class="fab fa-fw fa-2x fa-creative-commons-nd"></i></span>
+  CC BY-NC-ND 4.0 
+</a>
+
+
+    </div>
+</div></div>
+</div><aside class="sidebar d-flex docs-sidebar col-lg-3 position-sticky">
+  <div class="container">
+    
+    <div class="post-toc row mb-4 card component" id="postTOC">
+  <div class="card-header">
+    <h2 class="card-title">Contents</h2>
+  </div>
+  <div class="card-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-wechat-applet">Introduction to wechat applet</a></li>
+    <li><a href="#project-realization">Project realization</a></li>
+    <li><a href="#concrete-step">Concrete Step</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <section class="recent-posts row card component">
+  <div class="card-header">
+    <h2 class="card-title">Recent Posts</h2>
+  </div>
+  <div class="card-body">
+    <ul class="post-list"><li>
+        <a href="/en/docs/autojs/">Autojs
+</a>
+      </li><li>
+        <a href="/en/docs/wechat-applet/">Wechat-Applet
+</a>
+      </li><li>
+        <a href="/en/docs/smart-home/">Smart-Home
+</a>
+      </li><li>
+        <a href="/en/docs/test-tooling/">Test-Tooling
+</a>
+      </li><li>
+        <a href="/en/docs/xintang-project-hall-induction/">Xintang-Project-Hall-Induction
+</a>
+      </li></ul>
+  </div>
+</section>
+
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><ul class="nav justify-content-between footer-memu mb-3"><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Menu
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="/en/about/"><i class="fas fa-fw fa-user"></i>Resume
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="https://gitee.com/wawmm" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github"></i>Gitee
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="https://github.com/wawmb/wawmb.github.io" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-question-circle"></i>Github
+</a>
+        </li></ul></li><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Docs
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="/en/posts/markdown-syntax/">Markdown Syntax Guide
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/autojs/">Autojs
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/electronic-contest/">Electronic-Contest
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/hetai-project/">Hetai-Project
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/smart-home/">Smart-Home
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/test-tooling/">Test-Tooling
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/wechat-applet/">Wechat-Applet
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/xintang-project-digital-display/">Xintang-Project-Digital-Display
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/xintang-project-hall-induction/">Xintang-Project-Hall-Induction
+</a>
+        </li></ul></li><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Study
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo
+</a>
+        </li></ul></li></ul><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/" title="bilibili" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bilibili"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://bitbucket.org/" title="Bitbucket" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bitbucket"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://discord.com/invite/" title="Discord" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discord"></i>
+      </a><a class="nav-link social-link" target="_blank" href="" title="Discourse" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discourse"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://hub.docker.com/u/e" title="Docker Hub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-docker"></i>
+      </a><a class="nav-link social-link" href="mailto:wawmmb@sina.cn" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://facebook.com/" title="Facebook" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-facebook-f"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://facebook.com/groups/" title="Facebook Group" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-facebook-square"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://github.com/https://github.com/wawmb/wawmb.github.io" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://gitlab.com/" title="GitLab" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-gitlab"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.instagram.com/" title="Instagram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-instagram"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://kaggle.com/" title="Kaggle" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-kaggle"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/" title="Last.fm" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-lastfm"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/" title="LinkedIn" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://medium.com/@" title="Medium" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.pinterest.com/" title="Pinterest" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-pinterest"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1642348878&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.quora.com/profile/" title="Quora" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-quora"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/" title="Reddit" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-reddit"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://stackoverflow.com/users/" title="Stack Overflow" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-stack-overflow"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://t.me/" title="Telegram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-telegram-plane"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.tiktok.com/@" title="TikTok" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-tiktok"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://.tumblr.com" title="Tumblr" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-tumblr"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://twitter.com/" title="Twitter" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-twitter"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://weibo.com/" title="Weibo" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-weibo"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.youtube.com/channel/" title="Youtube" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-youtube"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/" title="Zhihu" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-zhihu"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2016-2022 Dustin Huang. All Rights Reserved.
+</div>
+
+
+</footer>
+<script src="/js/main.2d7cc08433fd5cc4979effb84c951d48f20ab2151a0857e244e91ab5421293ac.js" integrity="sha256-LXzAhDP9XMSXnv&#43;4TJUdSPIKshUaCFfiROkatUISk6w=" crossorigin="anonymous" defer></script><script src="/js/icons.min.8ddcaafc364ff0296c2209c5495287f0de039b852da9b24847f94c198b7639b6.js" integrity="sha256-jdyq/DZP8ClsIgnFSVKH8N4Dm4UtqbJIR/lMGYt2ObY=" crossorigin="anonymous" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/service-worker.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script><script src="/js/viewer.min.33f769b3bb2415045aecd0ae9bc8196997beaaabf70c9f8bf301d28851d95740.js" integrity="sha256-M/dps7skFQRa7NCum8gZaZe&#43;qqv3DJ&#43;L8wHSiFHZV0A=" crossorigin="anonymous" defer></script>
+</body>
+</html>

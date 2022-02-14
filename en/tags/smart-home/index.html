@@ -1,0 +1,451 @@
+<!doctype html><html lang="en" data-palette="blue"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart-Home - Tags - Dustin&#39;s Website</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/icons/favicon.ico">
+<link rel="manifest" href="/en/manifest.json">
+<meta name="keywords" content="Hugo, Bootstrap, Blog Theme" />
+<meta name="description" content="An extreme fast, responsive and feature-rich blog theme for Hugo" /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Smart-Home">
+<meta itemprop="description" content="An extreme fast, responsive and feature-rich blog theme for Hugo"><meta property="og:title" content="Smart-Home" />
+<meta property="og:description" content="An extreme fast, responsive and feature-rich blog theme for Hugo" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/en/tags/smart-home/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Smart-Home"/>
+<meta name="twitter:description" content="An extreme fast, responsive and feature-rich blog theme for Hugo"/>
+<meta property="og:image" content="/images/1.png"/>
+  <meta name="twitter:image" content="/images/1.png"/><link rel="alternate" type="application/rss+xml" href="/en/tags/smart-home/index.xml" title="Dustin's Website" /><link rel="stylesheet" href="/css/main.min.a74c8f05dc4b16520ce1637158954c31b4b0ab705ec9f6762d5b05039f72942e.css" integrity="sha256-p0yPBdxLFlIM4WNxWJVMMbSwq3BeyfZ2LVsFA59ylC4=" crossorigin="anonymous"><link rel="stylesheet" href="/css/viewer.min.3d228794bcedbbfa0412beb8fbc1ec6973202945e42af7004f742a4d7bd620ab.css" integrity="sha256-PSKHlLztu/oEEr64&#43;8HsaXMgKUXkKvcAT3QqTXvWIKs=" crossorigin="anonymous"></head>
+  <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3" href="/en/"><img class="logo" alt="Logo" src="/images/1.png" loading="lazy"
+   width="1023" height="965"
+   />
+Welcome to Visit
+    </a>
+    
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Settings</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-language"></i> Language</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="dropdown">
+        <a class="btn btn-sm btn-outline-primary dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li><a class="dropdown-item" href="/zh-cn/">简体中文</a></li></ul>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> Mode</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> Palette</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex justify-content-between visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="Blue"
+        class="btn btn-sm w-100 palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="Blue Gray"
+        class="btn btn-sm w-100 palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="Brown"
+        class="btn btn-sm w-100 palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="Cyan"
+        class="btn btn-sm w-100 palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="Green"
+        class="btn btn-sm w-100 palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="Indigo"
+        class="btn btn-sm w-100 palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="Orange"
+        class="btn btn-sm w-100 palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="Pink"
+        class="btn btn-sm w-100 palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="Purple"
+        class="btn btn-sm w-100 palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="Red"
+        class="btn btn-sm w-100 palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="Teal"
+        class="btn btn-sm w-100 palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="Yellow"
+        class="btn btn-sm w-100 palette" data-palette="yellow">
+      </button></div>
+</section>
+<section class="setting actions d-flex justify-content-around mt-auto overflow-auto">
+  <a role="button" class="action action-go-back" href="javascript: window.history.back();">
+    <span class="action-icon"><i class="fas fa-2x fa-arrow-left"></i></span> Go back
+  </a>
+  <a role="button" class="action action-reload-page">
+    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+  </a>
+  <a role="button" class="action action-copy-url">
+    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> Copy URL
+  </a></section>
+
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/en/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/en/series/">
+            <i class="fas fa-fw fa-columns"></i>Series
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>Archives
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/categories/">
+            <i class="fas fa-fw fa-folder"></i>Categories
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/en/tags/">
+            <i class="fas fa-fw fa-tags"></i>Tags
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu"><li>
+              <a class="dropdown-item"
+                href="/en/about/">
+                Resume
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://gitee.com/wawmm" target="_blank" rel="noopener noreferrer">
+                Gitee
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/wawmb/wawmb.github.io" target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/en/">Home</a></li><li class="breadcrumb-item"><a href="/en/tags/">Tags</a></li><li class="breadcrumb-item active">Smart-Home</li></ol>
+  </div>
+</nav><div class="posts mb-4"><article class="row card post component"><div class="card-header">
+    <h2 class="card-title post-title">
+      <a href="/en/docs/smart-home/">Smart-Home
+</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta">
+  <span class="post-date" title="created on 2020-05-19 19:54:29 &#43;0800 CST.">
+    May 19, 2020
+  </span><span class="post-reading-time">
+    12 min read
+  </span><span class="post-taxonomies"><a href="/en/categories/smart-home/" class="badge post-taxonomy">Smart-Home</a><a href="/en/series/docs/" class="badge post-taxonomy">Docs</a><a href="/en/tags/smart-home/" class="badge post-taxonomy">Smart-Home</a></span>
+</div>
+<div class="post-summary">
+      <h2 id="introduction-to-smart-home">Introduction to Smart-Home<a class="anchor ms-1" href="#introduction-to-smart-home"><i class="fas fa-link"></i></a></h2>
+<p>  Smart home is a residential platform, which integrates the facilities related to home life by using generic cabling technology, network communication technology, security prevention technology, automatic control technology and audio and video technology, constructs an efficient management system of residential facilities and family schedule affairs, improves the safety, convenience, comfort and artistry of home, and realizes an environment-friendly and energy-saving living environment.</p><div><a class="btn btn-sm btn-primary btn-read-more" href="/en/docs/smart-home/">Read More</a></div>
+    </div>
+  </div>
+</article>
+</div><div class="row table-responsive mb-3"></div>
+</div>
+
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container d-flex flex-column">
+    
+    <section class="card row text-center profile component">
+  <div class="card-body">
+    <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Dustin Huang" src="/images/profile2.webp" loading="lazy"
+   width="400" height="400"
+   />
+</div>
+    <div class="col-12 profile-meta"><div class="profile-name">Dustin Huang</div><div class="profile-bio">Software and hardware engineer,Phper.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>L&T Display Technology(Fujian)Ltd</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i><a href='https://www.openstreetmap.org/search?query=福建省'>Fujian</a></div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="/en/about/">Resume</a></div></div>
+  </div>
+</section>
+  <section class="featured-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title">Featured Posts</h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list"><li>
+          <a href="/en/docs/autojs/">Autojs
+</a>
+        </li><li>
+          <a href="/en/posts/markdown-syntax/">Markdown Syntax Guide
+</a>
+        </li><li>
+          <a href="/en/docs/wechat-applet/">Wechat-Applet
+</a>
+        </li><li>
+          <a href="/en/docs/smart-home/">Smart-Home
+</a>
+        </li><li>
+          <a href="/en/docs/test-tooling/">Test-Tooling
+</a>
+        </li></ul>
+    </div>
+  </section><section class="recent-posts row card component">
+  <div class="card-header">
+    <h2 class="card-title">Recent Posts</h2>
+  </div>
+  <div class="card-body">
+    <ul class="post-list"><li>
+        <a href="/en/docs/autojs/">Autojs
+</a>
+      </li><li>
+        <a href="/en/posts/markdown-syntax/">Markdown Syntax Guide
+</a>
+      </li><li>
+        <a href="/en/docs/wechat-applet/">Wechat-Applet
+</a>
+      </li><li>
+        <a href="/en/docs/smart-home/">Smart-Home
+</a>
+      </li><li>
+        <a href="/en/docs/test-tooling/">Test-Tooling
+</a>
+      </li></ul>
+  </div>
+</section><section class="series-taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/en/series">Series</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/en/series/docs/" class="badge rounded post-taxonomy" title="Docs">
+            Docs<span class="badge badge-sm text-white bg-accent ms-1">9</span></a></div>
+      </div>
+    </section><section class="categories-taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/en/categories">Categories</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/en/categories/autojs/" class="badge rounded post-taxonomy" title="Autojs">
+            Autojs<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/electronic-contest/" class="badge rounded post-taxonomy" title="Electronic-Contest">
+            Electronic-Contest<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/hetai-project/" class="badge rounded post-taxonomy" title="Hetai-Project">
+            Hetai-Project<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/markdown/" class="badge rounded post-taxonomy" title="Markdown">
+            Markdown<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/smart-home/" class="badge rounded post-taxonomy" title="Smart-Home">
+            Smart-Home<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/test-tooling/" class="badge rounded post-taxonomy" title="Test-Tooling">
+            Test-Tooling<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/wechat-applet/" class="badge rounded post-taxonomy" title="Wechat-Applet">
+            Wechat-Applet<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/xintang-project-digital-display/" class="badge rounded post-taxonomy" title="Xintang-Project-Digital-Display">
+            Xintang-Project-Digital-Display<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/categories/xintang-project-hall-induction/" class="badge rounded post-taxonomy" title="Xintang-Project-Hall-Induction">
+            Xintang-Project-Hall-Induction<span class="badge badge-sm text-white bg-accent ms-1">1</span></a></div>
+      </div>
+    </section><section class="tags-taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/en/tags">Tags</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/en/tags/xintang/" class="badge rounded post-taxonomy" title="Xintang">
+            Xintang<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="/en/tags/android/" class="badge rounded post-taxonomy" title="Android">
+            Android<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/css/" class="badge rounded post-taxonomy" title="CSS">
+            CSS<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/electronic-contest/" class="badge rounded post-taxonomy" title="Electronic-Contest">
+            Electronic-Contest<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/hetai/" class="badge rounded post-taxonomy" title="Hetai">
+            Hetai<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/html/" class="badge rounded post-taxonomy" title="HTML">
+            HTML<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/markdown/" class="badge rounded post-taxonomy" title="Markdown">
+            Markdown<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/smart-home/" class="badge rounded post-taxonomy" title="Smart-Home">
+            Smart-Home<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/test-tooling/" class="badge rounded post-taxonomy" title="Test-Tooling">
+            Test-Tooling<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="/en/tags/wechat/" class="badge rounded post-taxonomy" title="Wechat">
+            Wechat<span class="badge badge-sm text-white bg-accent ms-1">1</span></a></div>
+      </div>
+    </section>
+    
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><ul class="nav justify-content-between footer-memu mb-3"><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Menu
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="/en/about/"><i class="fas fa-fw fa-user"></i>Resume
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="https://gitee.com/wawmm" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github"></i>Gitee
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="https://github.com/wawmb/wawmb.github.io" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-question-circle"></i>Github
+</a>
+        </li></ul></li><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Docs
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="/en/posts/markdown-syntax/">Markdown Syntax Guide
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/autojs/">Autojs
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/electronic-contest/">Electronic-Contest
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/hetai-project/">Hetai-Project
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/smart-home/">Smart-Home
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/test-tooling/">Test-Tooling
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/wechat-applet/">Wechat-Applet
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/xintang-project-digital-display/">Xintang-Project-Digital-Display
+</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/en/docs/xintang-project-hall-induction/">Xintang-Project-Hall-Induction
+</a>
+        </li></ul></li><li class="nav-item"><ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" target="_blank" rel="noopener noreferrer">Study
+</a>
+      </li><li class="nav-item">
+            <a class="nav-link" href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo
+</a>
+        </li></ul></li></ul><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/" title="bilibili" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bilibili"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://bitbucket.org/" title="Bitbucket" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bitbucket"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://discord.com/invite/" title="Discord" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discord"></i>
+      </a><a class="nav-link social-link" target="_blank" href="" title="Discourse" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discourse"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://hub.docker.com/u/e" title="Docker Hub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-docker"></i>
+      </a><a class="nav-link social-link" href="mailto:wawmmb@sina.cn" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://facebook.com/" title="Facebook" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-facebook-f"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://facebook.com/groups/" title="Facebook Group" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-facebook-square"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://github.com/https://github.com/wawmb/wawmb.github.io" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://gitlab.com/" title="GitLab" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-gitlab"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.instagram.com/" title="Instagram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-instagram"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://kaggle.com/" title="Kaggle" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-kaggle"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/" title="Last.fm" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-lastfm"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/" title="LinkedIn" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://medium.com/@" title="Medium" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.pinterest.com/" title="Pinterest" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-pinterest"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1642348878&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.quora.com/profile/" title="Quora" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-quora"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/" title="Reddit" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-reddit"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://stackoverflow.com/users/" title="Stack Overflow" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-stack-overflow"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://t.me/" title="Telegram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-telegram-plane"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.tiktok.com/@" title="TikTok" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-tiktok"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://.tumblr.com" title="Tumblr" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-tumblr"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://twitter.com/" title="Twitter" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-twitter"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://weibo.com/" title="Weibo" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-weibo"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.youtube.com/channel/" title="Youtube" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-youtube"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/" title="Zhihu" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-zhihu"></i>
+      </a><a class="nav-link social-link" target="_blank" href="/en/tags/smart-home/index.xml" title="RSS" rel="noopener noreferrer">
+      <i class="fas fa-fw fa-2x fa-rss"></i>
+    </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2016-2022 Dustin Huang. All Rights Reserved.
+</div>
+
+
+</footer>
+<script src="/js/main.2d7cc08433fd5cc4979effb84c951d48f20ab2151a0857e244e91ab5421293ac.js" integrity="sha256-LXzAhDP9XMSXnv&#43;4TJUdSPIKshUaCFfiROkatUISk6w=" crossorigin="anonymous" defer></script><script src="/js/icons.min.8ddcaafc364ff0296c2209c5495287f0de039b852da9b24847f94c198b7639b6.js" integrity="sha256-jdyq/DZP8ClsIgnFSVKH8N4Dm4UtqbJIR/lMGYt2ObY=" crossorigin="anonymous" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/service-worker.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script><script src="/js/viewer.min.33f769b3bb2415045aecd0ae9bc8196997beaaabf70c9f8bf301d28851d95740.js" integrity="sha256-M/dps7skFQRa7NCum8gZaZe&#43;qqv3DJ&#43;L8wHSiFHZV0A=" crossorigin="anonymous" defer></script>
+</body>
+</html>

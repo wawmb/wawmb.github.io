@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>合泰 on 黄艳杰的网站</title>
+    <link>/zh-cn/tags/%E5%90%88%E6%B3%B0/</link>
+    <description>Recent content in 合泰 on 黄艳杰的网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 27 Dec 2018 21:04:32 +0800</lastBuildDate><atom:link href="/zh-cn/tags/%E5%90%88%E6%B3%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>合泰项目</title>
+      <link>/zh-cn/docs/hetai-project/</link>
+      <pubDate>Thu, 27 Dec 2018 21:04:32 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/zh-cn/docs/hetai-project/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;a class=&#34;anchor ms-1&#34; href=&#34;#项目简介&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  基于合泰芯片BS84B08A-3触摸芯片设计T10机种泡沫盾板原理图PCB，并编写其对应触摸功能程序。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dustin&#39;s Website</title>
+    <link>/en/</link>
+    <description>Recent content on Dustin&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 27 Jun 2021 19:54:29 +0800</lastBuildDate><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume</title>
+      <link>/en/about/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/about/</guid>
+      <description>Resume of Huang Yanjie  Survey：three years working experience | male | 25 years old (December 22, 1996) | unmarried | 177cm Telephone：15606902050 E-mail： wawmmb@sina.cn Address：Putian,Fujian Industry：Embedded/Internet of things/consumer electronics Position：Senior Software Engineer School：Xiamen Institute of Technology Education：undergraduate Major：electronic information engineering  Work Experience 2020.3~now：L&amp;amp;T Display Technology(Fujian)Ltd 1 year and 11 months Position: Senior Software Engineer Department: product R &amp;amp; D department
+Commercial display Project  Be responsible for debugging and debugging Linux with Android system display on large screen such as commercial display, cooperate with QA department in the plant to debug its corresponding functions through the application layer, analyze the problems raised by QA, and output the corresponding software engineering specifications of commercial display model.</description>
+    </item>
+    
+    <item>
+      <title>Autojs</title>
+      <link>/en/docs/autojs/</link>
+      <pubDate>Sun, 27 Jun 2021 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/autojs/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-autojs&#34;&gt;Introduction to Auto.JS&lt;a class=&#34;anchor ms-1&#34; href=&#34;#introduction-to-autojs&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Auto. JS is a JavaScript automation tool on Android platform. Its essence is that it can execute simple JavaScript scripts written by itself, especially an android app that can perform some operations on other apps when &amp;ldquo;barrier free mode&amp;rdquo; is turned on, which is convenient for automatic operation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>/en/posts/markdown-syntax/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Wechat-Applet</title>
+      <link>/en/docs/wechat-applet/</link>
+      <pubDate>Wed, 21 Oct 2020 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/wechat-applet/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-wechat-applet&#34;&gt;Introduction to wechat applet&lt;a class=&#34;anchor ms-1&#34; href=&#34;#introduction-to-wechat-applet&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  The main development language of applet is JavaScript. Compared with ordinary web page development, the development of applet is very similar. For front-end developers, the development cost of migrating from web development to applet is not high, but the two are still a little different.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart-Home</title>
+      <link>/en/docs/smart-home/</link>
+      <pubDate>Tue, 19 May 2020 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/smart-home/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-smart-home&#34;&gt;Introduction to Smart-Home&lt;a class=&#34;anchor ms-1&#34; href=&#34;#introduction-to-smart-home&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Smart home is a residential platform, which integrates the facilities related to home life by using generic cabling technology, network communication technology, security prevention technology, automatic control technology and audio and video technology, constructs an efficient management system of residential facilities and family schedule affairs, improves the safety, convenience, comfort and artistry of home, and realizes an environment-friendly and energy-saving living environment.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test-Tooling</title>
+      <link>/en/docs/test-tooling/</link>
+      <pubDate>Tue, 12 Nov 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/test-tooling/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-test-tooling&#34;&gt;Introduction to test tooling&lt;a class=&#34;anchor ms-1&#34; href=&#34;#introduction-to-test-tooling&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  The so-called test tooling is the equipment used to test whether the product meets the expected index. When the product is unqualified, the test tooling will respond accordingly.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xintang-Project-Hall-Induction</title>
+      <link>/en/docs/xintang-project-hall-induction/</link>
+      <pubDate>Thu, 18 Jul 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/xintang-project-hall-induction/</guid>
+      <description>&lt;h2 id=&#34;project-introduction&#34;&gt;Project introduction&lt;a class=&#34;anchor ms-1&#34; href=&#34;#project-introduction&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Based on the new Tang chip ms51fb9ae chip, the T16 knob on light PCB is designed, and its corresponding knob function program is written.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xintang-Project-Digital-Display</title>
+      <link>/en/docs/xintang-project-digital-display/</link>
+      <pubDate>Tue, 26 Mar 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/xintang-project-digital-display/</guid>
+      <description>&lt;h2 id=&#34;project-introduction&#34;&gt;Project introduction&lt;a class=&#34;anchor ms-1&#34; href=&#34;#project-introduction&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Based on Xintang chip ms51fb9ae chip, the schematic PCB of T10 window board is designed, and its corresponding digital display function program is written.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hetai-Project</title>
+      <link>/en/docs/hetai-project/</link>
+      <pubDate>Thu, 27 Dec 2018 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/hetai-project/</guid>
+      <description>&lt;h2 id=&#34;project-introduction&#34;&gt;Project introduction&lt;a class=&#34;anchor ms-1&#34; href=&#34;#project-introduction&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  Based on the BS84B08A-3 touch chip of Hetai chip, the T10 foam shield board principle diagram PCB is designed, and its corresponding touch function program is written.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Electronic-Contest</title>
+      <link>/en/docs/electronic-contest/</link>
+      <pubDate>Mon, 16 Jul 2018 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/docs/electronic-contest/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-test-tooling&#34;&gt;Introduction to test tooling&lt;a class=&#34;anchor ms-1&#34; href=&#34;#introduction-to-test-tooling&#34;&gt;&lt;i class=&#34;fas fa-link&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;  It is required that the trolley be charged at a fixed time for one minute, and the trolley can climb the slope and follow the road according to the infrared reception.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Offline</title>
+      <link>/en/offline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/offline/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

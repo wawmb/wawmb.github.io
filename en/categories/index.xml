@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Dustin&#39;s Website</title>
+    <link>/en/categories/</link>
+    <description>Recent content in Categories on Dustin&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 27 Jun 2021 19:54:29 +0800</lastBuildDate><atom:link href="/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autojs</title>
+      <link>/en/categories/autojs/</link>
+      <pubDate>Sun, 27 Jun 2021 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/autojs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>/en/categories/markdown/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wechat-Applet</title>
+      <link>/en/categories/wechat-applet/</link>
+      <pubDate>Wed, 21 Oct 2020 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/wechat-applet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smart-Home</title>
+      <link>/en/categories/smart-home/</link>
+      <pubDate>Tue, 19 May 2020 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/smart-home/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test-Tooling</title>
+      <link>/en/categories/test-tooling/</link>
+      <pubDate>Tue, 12 Nov 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/test-tooling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xintang-Project-Hall-Induction</title>
+      <link>/en/categories/xintang-project-hall-induction/</link>
+      <pubDate>Thu, 18 Jul 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/xintang-project-hall-induction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xintang-Project-Digital-Display</title>
+      <link>/en/categories/xintang-project-digital-display/</link>
+      <pubDate>Tue, 26 Mar 2019 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/xintang-project-digital-display/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hetai-Project</title>
+      <link>/en/categories/hetai-project/</link>
+      <pubDate>Thu, 27 Dec 2018 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/hetai-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electronic-Contest</title>
+      <link>/en/categories/electronic-contest/</link>
+      <pubDate>Mon, 16 Jul 2018 19:54:29 +0800</pubDate>
+      <author>wawmmb@sina.cn (Dustin Huang)</author>
+      <guid>/en/categories/electronic-contest/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

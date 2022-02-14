@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>搜索 on 黄艳杰的网站</title>
+    <link>/zh-cn/search/</link>
+    <description>Recent content in 搜索 on 黄艳杰的网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>wawmmb@sina.cn (Dustin Huang)</managingEditor>
+    <webMaster>wawmmb@sina.cn (Dustin Huang)</webMaster>
+    <copyright>Copyright © 2016-{year} Dustin Huang. All Rights Reserved.</copyright><atom:link href="/zh-cn/search/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
